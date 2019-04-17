@@ -35,6 +35,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var scrollView: UIScrollView!
     
+    @IBOutlet weak var label: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -51,7 +53,7 @@ class ViewController: UIViewController {
         animals.shuffle()
         
         // MARK: scrollView
-        //self.scrollView.delegate = self as! UIScrollViewDelegate
+        self.scrollView.delegate = self
         scrollView.contentSize = CGSize(width: 1125, height:500)
         
         // MARK: button
@@ -59,12 +61,77 @@ class ViewController: UIViewController {
             let button = UIButton(type: .system)
             button.setTitle(animals[i].name, for: .normal) // set the title to be the current animal’s name.
             button.tag = i // tag is the index of the animal
-            button.addTarget(self, action: #selector(buttonPress), for: .touchUpInside)
+            button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
             button.frame = CGRect(x: 375*i, y: 40, width: 375, height: 60)
             scrollView.addSubview(button)
         }
+        
+        // MARK: image scroll
+        for i in 0...2{
+            let imageView = UIImageView()
+            let x = self.view.frame.size.width * CGFloat(i)
+            imageView.frame = CGRect(x: x, y: 0, width: self.view.frame.width, height: self.view.frame.height)
+            imageView.contentMode = .scaleAspectFit
+            imageView.image = animals[i].image
+            scrollView.contentSize.width = scrollView.frame.size.width * CGFloat(i + 1)
+            scrollView.addSubview(imageView)
+        }
+        
+        // label show the first species
+        label.textAlignment = .center
+        label.text = animals[0].species
+        
+    }
+    
+    // MARK: buttonTapped
+    @objc func buttonTapped(sender: UIButton){
+        // get the current animal
+        let animalId = sender.tag
+        let animal : Animal = animals[animalId]
+        
+        // alert info
+        var yearOrS : String
+        // decide year or years
+        if (animal.age == 1){
+            yearOrS = "year"
+        }
+        else{
+            yearOrS = "years"
+        }
+        let animalInfo = UIAlertController(title: animal.name, message: "This \(animal.species) is \(animal.age) \(yearOrS) old.", preferredStyle: .alert)
+        animalInfo.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+            NSLog("The \"OK\" alert occured.")
+        }))
+        self.present(animalInfo, animated: true, completion: nil)
+        print(animal.description)
+        
+        // MARK: AVAudioPlayer
+        
+        let soundURL = Bundle.main.url(forResource: animal.soundPath, withExtension: "mp3")
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: soundURL!)
+            
+        } catch  {
+            print(error)
+        }
+        audioPlayer.play() // playing sound
     }
 
 
 }
 
+extension ViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        //set the view controller as the scroll view’s delegate
+        scrollView.delegate = self
+        
+        // set the label accroding to the page and animal species
+        label.textAlignment = .center
+        let pageNum = round(scrollView.contentOffset.x/view.frame.width)
+        let animal : Animal = animals[Int(pageNum)]
+        label.text = animal.species
+        
+        // transparency
+        label.alpha = abs((scrollView.contentOffset.x/view.frame.width).truncatingRemainder(dividingBy: 1) - 0.5) * 2
+    }
+}
