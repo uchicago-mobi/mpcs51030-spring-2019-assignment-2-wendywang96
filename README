@@ -1,0 +1,32 @@
+Resources:
+
+  images:
+    cat: http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E5%B8%83%E5%81%B6%E7%8C%AB&step_word=&hs=0&pn=0&spn=0&di=239030&pi=0&rn=1&tn=baiduimagedetail&is=0%2C0&istype=2&ie=utf-8&oe=utf-8&in=&cl=2&lm=-1&st=-1&cs=3616977813%2C2534690226&os=193816333%2C413589133&simid=3099122708%2C3652375360&adpicid=0&lpn=0&ln=1891&fr=&fmq=1555542694306_R&fm=index&ic=0&s=undefined&hd=undefined&latest=undefined&copyright=undefined&se=&sme=&tab=0&width=&height=&face=undefined&ist=&jit=&cg=&bdtype=0&oriquery=&objurl=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201505%2F07%2F20150507214556_JYinM.jpeg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fooo_z%26e3B17tpwg2_z%26e3Bv54AzdH3Fks52AzdH3F%3Ft1%3Dnmamdalnl&gsm=0&rpstart=0&rpnum=0&islist=&querylist=&force=undefined
+    dog: http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E8%90%A8%E6%91%A9&step_word=&hs=0&pn=0&spn=0&di=4420&pi=0&rn=1&tn=baiduimagedetail&is=0%2C0&istype=2&ie=utf-8&oe=utf-8&in=&cl=2&lm=-1&st=-1&cs=1702535346%2C314337760&os=1427304195%2C1486452754&simid=1971383330%2C707144827&adpicid=0&lpn=0&ln=1900&fr=&fmq=1555542741298_R&fm=result&ic=0&s=undefined&hd=&latest=&copyright=&se=&sme=&tab=0&width=&height=&face=undefined&ist=&jit=&cg=&bdtype=13&oriquery=&objurl=http%3A%2F%2Fimgsrc.baidu.com%2Fimage%2Fc0%3Dpixel_huitu%2C0%2C0%2C294%2C40%2Fsign%3D2ed2282fc4fc1e17e9b2847123e8936f%2F6f061d950a7b0208168fa0d869d9f2d3572cc841.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fooo_z%26e3Bi7tp7_z%26e3Bv54AzdH3Fri5p5AzdH3Ffi5oAzdH3Fda8c8ddbAzdH3Fd89b88dm08cl_z%26e3Bip4s&gsm=0&rpstart=0&rpnum=0&islist=&querylist=&force=undefined
+    bird: http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E8%9C%9C%E6%A1%83%E9%B9%A6%E9%B9%89&step_word=&hs=0&pn=2&spn=0&di=36860&pi=0&rn=1&tn=baiduimagedetail&is=0%2C0&istype=2&ie=utf-8&oe=utf-8&in=&cl=2&lm=-1&st=-1&cs=265129629%2C761967649&os=1021146943%2C668354676&simid=0%2C0&adpicid=0&lpn=0&ln=447&fr=&fmq=1555542764253_R&fm=result&ic=0&s=undefined&hd=&latest=&copyright=&se=&sme=&tab=0&width=&height=&face=undefined&ist=&jit=&cg=&bdtype=15&oriquery=&objurl=http%3A%2F%2Fimg1.doubanio.com%2Fview%2Fgroup_topic%2Fl%2Fpublic%2Fp142331378.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fooo_z%26e3B157kwg_z%26e3Bv54AzdH3F2657rAzdH3Fp5rtvAzdH3F8dcbcb8b8AzdH3F%3Fpyrj%3D6jv&gsm=0&rpstart=0&rpnum=0&islist=&querylist=&force=undefined
+    
+  sounds:
+    cat: http://sc.chinaz.com/yinxiao/140226282612.htm
+    dog: http://sc.chinaz.com/yinxiao/140226279491.htm
+    bird: http://sc.chinaz.com/yinxiao/120528456414.htm
+
+-----------------------------------------------------------------------------------------------------
+
+Instructions:
+
+  selector:
+    https://www.bignerdranch.com/blog/hannibal-selector/
+    
+  image scrolling: 
+    https://www.codementor.io/taiwoadedotun/ios-swift-implementing-photos-app-image-scrolling-with-scroll-views-bkbcmrgz5
+
+  AVAudioPlayer:
+    https://www.hackingwithswift.com/example-code/media/how-to-play-sounds-using-avaudioplayer
+
+  scrollViewDidScroll:
+    https://stackoverflow.com/questions/41174803/event-scrolling-scrollviewdidscroll-never-called-swift-3
+    
+  UIAlertController:
+    https://nshipster.com/uialertcontroller/
+    
+  
