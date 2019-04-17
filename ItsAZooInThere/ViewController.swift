@@ -9,6 +9,7 @@
 import UIKit
 import AVFoundation
 
+// class in swift -- http://www.runoob.com/swift/swift-classes.html
 class Animal: CustomStringConvertible{
     let name: String
     let species: String
@@ -41,7 +42,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         // MARK: animals array
-        // class in swift -- http://www.runoob.com/swift/swift-classes.html
         let cat = Animal("Miao", "Cat", 3, UIImage(named: "cat")!, "cat")
         let dog = Animal("Wang", "Dog", 2, UIImage(named: "dog")!, "dog")
         let bird = Animal("Nini", "Bird", 1, UIImage(named: "bird")!, "bird")
@@ -102,6 +102,8 @@ class ViewController: UIViewController {
         else{
             yearOrS = "years"
         }
+        
+        // alert -- https://blog.csdn.net/heye644171300/article/details/78407143
         let animalInfo = UIAlertController(title: animal.name, message: "This \(animal.species) is \(animal.age) \(yearOrS) old.", preferredStyle: .alert)
         animalInfo.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
             NSLog("The \"OK\" alert occured.")
@@ -118,7 +120,7 @@ class ViewController: UIViewController {
         } catch  {
             print(error)
         }
-        audioPlayer.play() // playing sound
+        audioPlayer.play()
     }
 
 
