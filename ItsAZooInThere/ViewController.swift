@@ -41,6 +41,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         // MARK: animals array
+        // class in swift -- http://www.runoob.com/swift/swift-classes.html
         let cat = Animal("Miao", "Cat", 3, UIImage(named: "cat")!, "cat")
         let dog = Animal("Wang", "Dog", 2, UIImage(named: "dog")!, "dog")
         let bird = Animal("Nini", "Bird", 1, UIImage(named: "bird")!, "bird")
@@ -53,10 +54,12 @@ class ViewController: UIViewController {
         animals.shuffle()
         
         // MARK: scrollView
+        // delegate -- https://www.cnblogs.com/penger/p/5190051.html
         self.scrollView.delegate = self
         scrollView.contentSize = CGSize(width: 1125, height:500)
         
         // MARK: button
+        // dynamic uibutton -- https://stacktips.com/tutorials/ios/how-to-create-dynamic-uibutton-on-uiscrollview-swift-3-0
         for i in 0...2{
             let button = UIButton(type: .system)
             button.setTitle(animals[i].name, for: .normal) // set the title to be the current animal’s name.
@@ -67,6 +70,7 @@ class ViewController: UIViewController {
         }
         
         // MARK: image scroll
+        // https://www.codementor.io/taiwoadedotun/ios-swift-implementing-photos-app-image-scrolling-with-scroll-views-bkbcmrgz5
         for i in 0...2{
             let imageView = UIImageView()
             let x = self.view.frame.size.width * CGFloat(i)
@@ -106,7 +110,7 @@ class ViewController: UIViewController {
         print(animal.description)
         
         // MARK: AVAudioPlayer
-        
+        // https://www.hackingwithswift.com/example-code/media/how-to-play-sounds-using-avaudioplayer
         let soundURL = Bundle.main.url(forResource: animal.soundPath, withExtension: "mp3")
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: soundURL!)
@@ -121,6 +125,7 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UIScrollViewDelegate {
+    // scrollViewDidScroll -- https://stackoverflow.com/questions/41174803/event-scrolling-scrollviewdidscroll-never-called-swift-3
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         //set the view controller as the scroll view’s delegate
         scrollView.delegate = self
