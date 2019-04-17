@@ -13,6 +13,9 @@
 		B3B142BB2267A21200F8DDDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3B142BA2267A21200F8DDDD /* Assets.xcassets */; };
 		B3B142BE2267A21200F8DDDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3B142BC2267A21200F8DDDD /* LaunchScreen.storyboard */; };
 		B3B142C92267A21200F8DDDD /* ItsAZooInThereTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B142C82267A21200F8DDDD /* ItsAZooInThereTests.swift */; };
+		B3B142D52267AA5500F8DDDD /* bird.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B3B142D42267AA5500F8DDDD /* bird.mp3 */; };
+		B3B142D82267AA9E00F8DDDD /* cat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B3B142D72267AA9E00F8DDDD /* cat.mp3 */; };
+		B3B142DA2267AAAB00F8DDDD /* dog.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B3B142D92267AAAB00F8DDDD /* dog.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		B3B142C42267A21200F8DDDD /* ItsAZooInThereTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ItsAZooInThereTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3B142C82267A21200F8DDDD /* ItsAZooInThereTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItsAZooInThereTests.swift; sourceTree = "<group>"; };
 		B3B142CA2267A21200F8DDDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3B142D42267AA5500F8DDDD /* bird.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = bird.mp3; path = ItsAZooInThere/Sounds/bird.mp3; sourceTree = SOURCE_ROOT; };
+		B3B142D72267AA9E00F8DDDD /* cat.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = cat.mp3; path = pic/cat.mp3; sourceTree = SOURCE_ROOT; };
+		B3B142D92267AAAB00F8DDDD /* dog.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = dog.mp3; path = pic/dog.mp3; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +87,7 @@
 				B3B142B52267A21000F8DDDD /* ViewController.swift */,
 				B3B142B72267A21000F8DDDD /* Main.storyboard */,
 				B3B142BA2267A21200F8DDDD /* Assets.xcassets */,
+				B3B142D62267AA6800F8DDDD /* Sounds */,
 				B3B142BC2267A21200F8DDDD /* LaunchScreen.storyboard */,
 				B3B142BF2267A21200F8DDDD /* Info.plist */,
 			);
@@ -94,6 +101,16 @@
 				B3B142CA2267A21200F8DDDD /* Info.plist */,
 			);
 			path = ItsAZooInThereTests;
+			sourceTree = "<group>";
+		};
+		B3B142D62267AA6800F8DDDD /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				B3B142D92267AAAB00F8DDDD /* dog.mp3 */,
+				B3B142D72267AA9E00F8DDDD /* cat.mp3 */,
+				B3B142D42267AA5500F8DDDD /* bird.mp3 */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,9 +194,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3B142D82267AA9E00F8DDDD /* cat.mp3 in Resources */,
 				B3B142BE2267A21200F8DDDD /* LaunchScreen.storyboard in Resources */,
 				B3B142BB2267A21200F8DDDD /* Assets.xcassets in Resources */,
+				B3B142DA2267AAAB00F8DDDD /* dog.mp3 in Resources */,
 				B3B142B92267A21000F8DDDD /* Main.storyboard in Resources */,
+				B3B142D52267AA5500F8DDDD /* bird.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,7 +389,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.ItsAZooInThere;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -386,7 +406,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.ItsAZooInThere;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
